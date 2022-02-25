@@ -20,13 +20,14 @@ public class TotalTodasDeducoes {
 	}
 
 	@Test
-	public void testeTotalDeducoes() throws DescricaoEmBrancoException, ValorDeducaoInvalidoException, NomeEmBrancoException {
+	public void testeTotalDeducoes() throws DescricaoEmBrancoException, ValorDeducaoInvalidoException, ValorRendimentoInvalidoException, NomeEmBrancoException {
+		simulador.cadastrarRendimento("Salario", 10000f);
 		simulador.cadastrarDeducao("Previdencia Privada", 500f);
 		simulador.cadastrarDeducao("Funpresp", 200f);
-		simulador.cadastrarContribuicaoPrevidenciaria("INSS", 1500f);
+		simulador.cadastrarContribuicaoPrevidenciaria("INSS", 800f);
 		simulador.cadastrarContribuicaoPrevidenciaria("Contracheque", 700f);
 		simulador.cadastrarPensaoAlimenticia(300f);
-		simulador.cadastrarPensaoAlimenticia(100f);
+		simulador.cadastrarPensaoAlimenticia(120.82f);
 		simulador.cadastrarDependente("joao", 170698f);
 		simulador.cadastrarDependente("Marcos", 260898f);
 		assertEquals(3000f, simulador.getTotalTodasDeducoes(), 0.1f);
