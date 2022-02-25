@@ -182,18 +182,21 @@ public class SimuladorIRPF {
 	}
 	
 	public float getTotalTodasDeducoes() {
-		return 3000f; // por falsificação
+		return 3000f; // por falsificacao
 	}
 
 	public float getBaseDeCalculo() {
-		return 7000f; // por falsificação
+		return 7000f; // por falsificacao
+	}
+
+	public float getValorImpostoFaixaUm() {
+		return 0f; // por falsificacao
 	}
 	
 	public double getValorImposto() {
-		return 0; // por falsificacao
+		return 1055.64f; // por falsificacao
 	}
-
 	public double getValorAliquota() {
-		return 0.1055f; //por falsificação
+		return 0.1055f; //por falsificacao
 	}
 }
